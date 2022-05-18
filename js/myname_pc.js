@@ -175,7 +175,7 @@ $(function(){
             gamema.css({
                 backgroundImage:drop,
                 animationName:'imgtb',
-                animationDuration:'10s'
+                animationDuration:'20s'
             });
         }
     })
