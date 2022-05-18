@@ -202,18 +202,19 @@ html{
             position: absolute;
             z-index: 4;
             background-color: #8acbbb;
-            height: #{'min(4.5rem,180px)'};
+            height: #{'min(5rem,200px)'};
             bottom: 0;
             width: 100%;
             opacity: 0;
             color: transparent;
+            border-top: 2px solid red;
             .btnLeft{
                 @include ptbtn;
                 width: calc(100% / 21 * 1.5);
                 height: #{'min(3rem,120px)'};
                 background-image: url('../images/game/gamebutton.png');
                 position: absolute;
-                left: 20%;
+                left: 25%;
                 bottom: 0.5rem;
                 z-index: 4;
             }
