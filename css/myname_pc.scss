@@ -1083,7 +1083,7 @@ html{
                     width: 70%;
                     background-color: #000;
                     height: #{'min(10rem,400px)'};
-                    right: 0;
+                    right: -2%;
                     top: #{'min(1.5rem,60px)'};
                     color: transparent;
                 }
@@ -1239,14 +1239,17 @@ html{
                     margin-top: $lh2;
                     font-size: #{'min(3em,30px)'};
                     text-align: center;
-                    cursor: pointer;
                     text-transform: capitalize;
                     position: relative;
                     z-index: 3;
-                    width: 25%;
+                    width: 14%;
                     left: 0;
                     right: 0;
                     margin: auto;
+                    cursor: pointer;
+                    a{
+
+                    }
                     &:hover::after{
                         opacity: 0.7;
                     }
