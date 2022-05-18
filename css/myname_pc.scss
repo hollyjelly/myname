@@ -207,7 +207,6 @@ html{
             width: 100%;
             opacity: 0;
             color: transparent;
-            border-top: 2px solid red;
             .btnLeft{
                 @include ptbtn;
                 width: calc(100% / 21 * 1.5);
@@ -224,7 +223,7 @@ html{
                 position: absolute;
                 width: calc(100% / 21 * 4);
                 right: 20%;
-                bottom: 0;
+                bottom: $lh;
                 height: #{'min(3.5rem,140px)'};
                 .image{
                     @include ptbtn;
