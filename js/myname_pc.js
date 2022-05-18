@@ -21,6 +21,8 @@ $(function(){
     var posX = 0 , posY = 0;
     var pernum = 0, pereach = 0;
 
+    $('html').animate({scrollTop:0},1250);
+
     for(var i = 0; i<len; i++){
         loc[i]= $('body>div').eq(i).offset().top;
     }
@@ -85,7 +87,7 @@ $(function(){
                 $('.gametop').css({opacity:'0'});
                 $('.gameleft').css({opacity:'0'});
                 $('.gameright').css({opacity:'0'});
-                $('.gamebottom').css({opacity:'0'});
+                $('.gamebottom').css({opacity:'0',zIndex:'-1'});
                 $('.maintop').css({opacity:1});
                 $('.mainleft').css({opacity:1});
                 $('.mainright').css({opacity:1});
@@ -94,7 +96,7 @@ $(function(){
                 $('.gametop').css({opacity:'1'});
                 $('.gameleft').css({opacity:'1'});
                 $('.gameright').css({opacity:'1'});
-                $('.gamebottom').css({opacity:'1'});
+                $('.gamebottom').css({opacity:'1',zIndex:'5'});
                 pertxt.each(function(width){
                     // 그래프
                     pereach = $(this).attr('data-num');

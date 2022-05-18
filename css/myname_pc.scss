@@ -105,7 +105,7 @@ html{
             height: #{'min(3rem,120px)'};
             background-image: url('../images/game/gamebutton.png');
             position: absolute;
-            left: 20%;
+            left: 25%;
             bottom: -3.5rem;
         }
         .btnRight{
@@ -1071,7 +1071,7 @@ html{
                     position: relative;
                     z-index: 1;
                     height: #{'min(17rem,680px)'};
-                    width: 100%;
+                    width: 110%;
                     color: transparent;
                     min-width: 500px;
                 }
@@ -1083,7 +1083,7 @@ html{
                     width: 70%;
                     background-color: #000;
                     height: #{'min(10rem,400px)'};
-                    right: 5%;
+                    right: 0;
                     top: #{'min(1.5rem,60px)'};
                     color: transparent;
                 }
@@ -1161,14 +1161,6 @@ html{
                                 color: #263d37;
                                 outline: 4px solid #263d37;
                                 font-size: #{'min(1.8em,18px)'};
-                            }
-                            &::selection{
-                                color: #fa096d;
-                                background-color: transparent;
-                            }
-                            &::-moz-selection{
-                                color: #fa096d;
-                                background-color: transparent;
                             }
                         }
                     }
@@ -1250,6 +1242,11 @@ html{
                     cursor: pointer;
                     text-transform: capitalize;
                     position: relative;
+                    z-index: 3;
+                    width: 25%;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
                     &:hover::after{
                         opacity: 0.7;
                     }
@@ -1263,16 +1260,7 @@ html{
                         position: absolute;
                         bottom: 0.3rem;
                         opacity: 0;
-                    }
-                    a{
-                        &::selection{
-                            color: #fa096d;
-                            background-color: transparent;
-                        }
-                        &::-moz-selection{
-                            color: #fa096d;
-                            background-color: transparent;
-                        }
+                        z-index: -1;
                     }
                 }
             }
