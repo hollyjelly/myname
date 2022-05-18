@@ -526,6 +526,7 @@ html{
                                 animation-name: 'mainme2';
                                 animation-duration: 2s;
                                 animation-iteration-count: infinite;
+                                animation-timing-function: linear;
                             }
                             &.i2{
                                 position: relative;
@@ -1357,8 +1358,11 @@ html{
     0%{
         top: 0;
     }
-    50%{
+    45%{
         top: -0.6rem;
+    }
+    70%{
+        top: 0;
     }
     100%{
         top: 0;
@@ -1368,8 +1372,14 @@ html{
     0%{
         top: 0;
     }
+    20%{
+        top: 0;
+    }
     50%{
-        top: -1.5rem;
+        top: -1.6rem;
+    }
+    70%{
+        top: 0;
     }
     100%{
         top: 0;
