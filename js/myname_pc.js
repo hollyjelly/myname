@@ -191,9 +191,15 @@ $(function(){
 
     var brow = navigator.userAgent;
     if(brow.match('ios | Android | Symbian | Apple | Samsung | LG | Blackberry | iPhone | Gallaxy')){
+<<<<<<< HEAD
         window.location.href = 'url(../mynamemb.html)'
     }else if(brow.match('iPad')){
         window.location.href = 'url(../index.html)'
+=======
+        window.location.href = './mynamemb.html'
+    }else if(brow.match('iPad')){
+        window.location.href = './index.html'
+>>>>>>> 37960bc90be0c5025465a04128db93bb94c0b27e
     }
     
 });
