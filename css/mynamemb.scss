@@ -548,11 +548,11 @@ html{
             border: 5px dashed #ffd36e;
             h2{
                 text-align: center;
-                font-size: #{'min(4em,40px)'};
+                font-size: #{'min(5em,50px)'};
                 font-family: bongus;
                 font-weight: 700;
                 line-height: $lh2;
-                margin-top: $lh3;
+                margin-top: $lh4;
             }
             .kakao{
                 @include ptbg;
@@ -586,7 +586,7 @@ html{
             .me{
                 @include flex;
                 color: transparent;
-                width: 35%;
+                width: 45%;
                 margin-left: auto;
                 margin-right: 3%;
                 .image{
@@ -598,14 +598,16 @@ html{
                     }
                     position: relative;
                     width: calc(100% / 2);
-                    height:$lh4;
+                    height: $lh4;
                     .image{
                         @include ptbtn;
                         background-image: url('../images/main1/hearttalk.gif');
                         position: absolute;
-                        width: 100%;
-                        height: $lh2;
-                        top: #{'min(-0.3rem,-12px)'};
+                        width: 80%;
+                        height: #{'min(1.5rem,60px)'};
+                        top: #{'min(-0.6rem,-24px)'};
+                        left: 0;right: 0;
+                        margin: auto;
                     }
                 }
             }
