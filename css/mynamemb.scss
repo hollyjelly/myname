@@ -124,7 +124,8 @@ html{
             position: absolute;
             width: 95%;
             height: #{'min(6rem,240px)'};
-            margin: 0 auto;
+            margin: auto;
+            left: 0;right: 0;
             top: $lh4;
             span{
                 position: absolute;
@@ -502,23 +503,25 @@ html{
                 margin: 0 auto;
                 margin-top: $lh2;
                 position: relative;
-                height: #{'min(8rem,320px)'};
+                // height: #{'min(8rem,320px)'};
+                height: 4rem;
                 .view{
                     @include ptbg;
                     background-position: top;
                     background-image: url('../images/programming/loading.jpg');
-                    width: 50%;
-                    height: #{'min(5rem,200px)'};
+                    width: 53%;
+                    height: 3rem;
                     position: absolute;
-                    top: $lh;
-                    right: 16%;
+                    top: 0.4rem;
+                    right: 15%;
                 }
                 .gameimage{
                     @include ptbtn;
                     background-image: url('../images/main1/bmomd.png');
                     position: absolute;
                     width: 100%;
-                    height: #{'min(8rem,320px)'};
+                    height: 4.3rem;
+                    // height: #{'min(8rem,320px)'};
                 }
 
             }
@@ -527,9 +530,9 @@ html{
                 .color{
                     color: transparent;
                     &:nth-child(1){
-                        background-color: #ffd36e;
                         margin-top: #{'min(-0.2rem,-8px)'};
-                        height: $lh;
+                        background-color: #ffd36e;
+                        height: $lh2;
                     }
                     &:nth-child(2){
                         background-color: #e9bc56;
