@@ -20,6 +20,13 @@ $(function(){
     var atr = 0, curind =0, tyt =0, drop =0;
     var posX = 0 , posY = 0;
     var pernum = 0, pereach = 0;
+    
+    var brow = navigator.userAgent;
+    if(brow.match('ios | Android | Symbian | Apple | Samsung | LG | Blackberry | iPhone | Gallaxy')){
+        window.location.href = 'url(../mynamemb.html)'
+    }else if(brow.match('iPad')){
+        window.location.href = 'url(../index.html)'
+    }
 
     $('html').animate({scrollTop:0},1250);
 
@@ -188,18 +195,5 @@ $(function(){
     uptxt.click(upclick)
     $('body').on('mousewheel',mouse);
     setTimeout(jump,3400);
-
-    var brow = navigator.userAgent;
-    if(brow.match('ios | Android | Symbian | Apple | Samsung | LG | Blackberry | iPhone | Gallaxy')){
-<<<<<<< HEAD
-        window.location.href = 'url(../mynamemb.html)'
-    }else if(brow.match('iPad')){
-        window.location.href = 'url(../index.html)'
-=======
-        window.location.href = './mynamemb.html'
-    }else if(brow.match('iPad')){
-        window.location.href = './index.html'
->>>>>>> 37960bc90be0c5025465a04128db93bb94c0b27e
-    }
     
 });
