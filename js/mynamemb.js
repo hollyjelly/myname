@@ -1,4 +1,6 @@
 $(function(){
+    var logo = $('.menuTop .logo');
+    var heart = $('.menuTop .heart .image');
     var group = $('.main.main02 .infoBtm .group');
     var ale = $('.main.main02 .infoBtm .alert');
     var aleimg = $('.main.main02 .infoBtm .alert .image');
@@ -7,6 +9,15 @@ $(function(){
     var view = $('.main.main03 .game .view');
     var img = 0,ind = 0, pt = 0;
 
+    function heartcli(){
+        $(this).css({opacity:'0'});
+        setTimeout(function(){
+            heart.css({opacity:'1'})},2000);
+    }
+    
+    function htmlview(){
+        $('html').animate({scrollTop:0},1250);
+    }
     
     function alertcli(){
         ind = $(this).index();
@@ -24,6 +35,8 @@ $(function(){
         ale.css({zIndex:'-1'});
     }
     
+    logo.click(htmlview);
+    heart.click(heartcli);
     xx.click(xcli);
     group.click(alertcli);
     chip.click(chipclick);
