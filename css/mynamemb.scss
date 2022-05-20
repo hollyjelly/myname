@@ -72,7 +72,7 @@ html{
 }
 .mainWrap{
     background-color: #4eadf5;
-    padding-top: $lh3;
+    padding-top: $lh2;
     .main.main01{
         position: relative;
         width: 100%;
@@ -418,17 +418,22 @@ html{
                 }
                 .alert{
                     @include flex;
-                    position: absolute;
+                    position: fixed;
                     width: 80%;
                     padding: 0 5%;
                     padding-top: #{'min(0.2rem,8px)'};
                     padding-bottom: #{'min(0.2rem,8px)'};
                     left: 0;right: 0;
-                    top: 0;
+                    top: 0;bottom: 0;
+                    z-index: 5;
                     margin: auto;
                     height: #{'min(2.25rem,90px)'};
                     background-color: #ffd36e;
                     outline: 6px solid #dca424;
+                    border-top: 3px solid #ca9b2f;
+                    border-right: 2.5px solid #ca9b2f;
+                    border-bottom: 1.5px solid #ca9b2f;
+                    display: none;
                     .image{
                         @include ptbtn;
                         background-image: url('../images/programming/btn01.gif');
@@ -439,11 +444,15 @@ html{
                     p{
                         width: 60%;
                         font-size: #{'min(1.2em,12px)'};
+                        color: #fff;
                     }
                     span{
                         line-height: #{'min(0.2rem,8px)'};
                         height: #{'min(0.3rem,12px)'};
                         width: 5%;
+                        text-transform: uppercase;
+                        color: #c4921e;
+                        font-family: pixel;
                     }
                 }
             }
@@ -455,12 +464,12 @@ html{
         .main.main03{
             .chip{
                 @include flex;
-                width: 80%;
+                width: 90%;
                 margin: 0 auto;
                 .image{
                     @include ptbtn;
-                    width: calc(100% / 4 * 1.5);
-                    height: $lh4;
+                    width: calc(100% / 3);
+                    height: $lh5;
                     color: transparent;
                     @for $i from 1 through 3{
                         &.i#{$i}{
@@ -470,27 +479,32 @@ html{
                 }
             }
             .game{
-                width: calc(100% / 4 * 3);
+                width: 90%;
                 color: transparent;
                 margin: 0 auto;
-                margin-top: $lh;
+                margin-top: $lh2;
                 position: relative;
-                height: #{'min(7rem,280px)'};
+                height: #{'min(8rem,320px)'};
                 .view{
                     @include ptbg;
+                    background-position: top;
                     background-image: url('../images/programming/loading.jpg');
-                    width: 60%;
+                    width: 56%;
                     height: #{'min(5rem,200px)'};
                     position: absolute;
                     top: $lh;
-                    right: 12%;
+                    right: 14%;
+                    &.on{
+                        animation-name: view;
+                        animation-duration: 8s;
+                    }
                 }
                 .gameimage{
                     @include ptbtn;
                     background-image: url('../images/main1/bmomd.png');
                     position: absolute;
                     width: 100%;
-                    height: #{'min(7rem,280px)'};
+                    height: #{'min(8rem,320px)'};
                 }
 
             }
@@ -520,11 +534,11 @@ html{
             border: 5px dashed #ffd36e;
             h2{
                 text-align: center;
-                font-size: #{'min(3em,30px)'};
+                font-size: #{'min(4em,40px)'};
                 font-family: bongus;
                 font-weight: 700;
                 line-height: $lh2;
-                margin-top: $lh2;
+                margin-top: $lh3;
             }
             .kakao{
                 @include ptbg;
@@ -541,7 +555,7 @@ html{
                 width: 45%;
                 text-align: center;
                 margin: 0 auto;
-                font-size: #{'min(15em,15px)'};
+                font-size: #{'min(2em,20px)'};
                 text-transform: capitalize;
                 &::after{
                     @include ptbtn;
@@ -558,7 +572,7 @@ html{
             .me{
                 @include flex;
                 color: transparent;
-                width: 30%;
+                width: 35%;
                 margin-left: auto;
                 margin-right: 3%;
                 .image{
@@ -569,8 +583,8 @@ html{
                         }
                     }
                     position: relative;
-                    width: calc(100% / 4 * 2);
-                    height: #{'min(2.5rem,100px)'};
+                    width: calc(100% / 2);
+                    height:$lh4;
                     .image{
                         @include ptbtn;
                         background-image: url('../images/main1/hearttalk.gif');
@@ -608,5 +622,16 @@ html{
     }
     100%{
         bottom: #{'min(1.5rem,60px)'};
+    }
+}
+@keyframes view{
+    0%{
+        background-position: top;
+    }
+    50%{
+        background-position: bottom;
+    }
+    100%{
+        background-position: top;
     }
 }
