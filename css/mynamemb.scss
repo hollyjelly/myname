@@ -1,0 +1,612 @@
+$lh : #{'min(0.5rem,20px)'};
+$lh2 : #{'min(1rem,40px)'};
+$lh3 : #{'min(2rem,80px)'};
+$lh4 : #{'min(3rem,120px)'};
+$lh5 : #{'min(4rem,160px)'};
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin ptbtn {
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: contain;
+}
+
+@mixin ptbg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// 글씨체
+@mixin ff($fontname,$url){
+    @font-face {
+        font-family: '#{$fontname}';
+        src: url('./fonts/#{$url}') format('truetype');
+    }
+}
+@include ff(pixel,'Pixel Sans Serif Condensed.ttf');
+@include ff(tardust,'PFStardust.ttf');
+@include ff(bongus,'Bongus Highlight.otf');
+
+// 세팅
+html{
+    font-size: 10vh;
+    body{
+        font-size: 2vh;
+        position: relative;
+        font-family: tardust;
+    }
+}
+
+.menuTop{
+    @include flex;
+    position: fixed;
+    z-index: 5;
+    width: 90%;
+    left: 0;right: 0;
+    margin: auto;
+    top: $lh;
+    .logo{
+        @include ptbtn;
+        background-image: url('../images/main1/logo\ md\ 1.gif');
+        width: calc(100% / 4 * 0.8);
+        height: #{'min(1.5rem,60px)'};
+        color: transparent;
+    }
+    .heart{
+        @include flex;
+        width: calc(100% / 4 * 1.6);
+        margin-top: $lh;
+        .image{
+            @include ptbtn;
+            background-image: url('../images/main1/heart.png');
+            width: calc(100% / 3);
+            height: $lh2;
+            color: transparent;
+        }
+    }
+}
+.mainWrap{
+    background-color: #4eadf5;
+    padding-top: $lh3;
+    .main.main01{
+        position: relative;
+        width: 100%;
+        height: #{'min(28rem,1120px)'};
+        overflow: hidden;
+        .cloud{
+            position: relative;
+            width: 100%;
+            height: #{'min(20.5rem,820px)'};
+            .image{
+                @include ptbtn;
+                @for $i from 1 through 4{
+                    &.i#{$i}{
+                        background-image: url('../images/mb/cloud#{$i}.png');
+                    }
+                }
+                color: transparent;
+                position: absolute;
+                &.i1{
+                    width: calc(100% / 4 * 3);
+                    height: $lh5;
+                    top: $lh;
+                    left: -15%;
+                }
+                &.i2{
+                    width: 80%;
+                    height: $lh5;
+                    top: #{'min(7.5rem,300px)'};
+                    right: -20%;
+                }
+                &.i3{
+                    width: calc(100% / 4 * 3);
+                    height: $lh5;
+                    bottom: #{'min(4rem,200px)'};
+                    left: -10%;
+                }
+                &.i4{
+                    width: calc(100% / 4 * 2.5);
+                    height: $lh4;
+                    bottom: 0;
+                    right: 5%;
+                }
+            }
+        }
+        .title{
+            @include ptbtn;
+            background-image: url('../images/mb/mainmobile1.png');
+            position: relative;
+            position: absolute;
+            width: 95%;
+            height: #{'min(6rem,240px)'};
+            margin: 0 auto;
+            top: $lh4;
+            span{
+                position: absolute;
+                text-align: center;
+                margin: auto;
+                left: 0;right: 0;
+                top: 0;bottom: 0;
+                font-size: #{'min(3.5em,35px)'};
+                font-family: pixel;
+                color: #fff;
+                width: 80%;
+                height: $lh4;
+            }
+        }
+        .bottom{
+            @include ptbg;
+            background-image: url('../images/bg/bgbtm.png');
+            position: relative;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: #{'min(5rem,200px)'};
+            .box{
+                @include ptbtn;
+                background-image: url('../images/main1/box.png');
+                position: absolute;
+                width: calc(100% / 4);
+                line-height: $lh3;
+                color: transparent;
+                top: #{'min(-0.5rem,-20px)'};
+                left: 15%;
+            }
+            .flower{
+                .image{
+                    @include ptbtn;
+                    background-image: url('../images/main1/flowermd.png');
+                    position: absolute;
+                    width: calc(100% / 4);
+                    height: $lh3;
+                    color: transparent;
+                    &.i1{
+                        left: 5%;
+                        bottom: $lh;
+                    }
+                    &.i2{
+                        margin: auto;
+                        left: 0;right: 0;
+                    }
+                    &.i3{
+                        right: 10%;
+                        bottom: $lh2;
+                    }
+                }
+            }
+            .me{
+                position: relative;
+                width: 100%;
+                height: #{'min(5rem,200px)'};
+                .image{
+                    @include ptbtn;
+                    @for $i from 1 through 2{
+                        &.i#{$i}{
+                            background-image: url('../images/main1/me#{$i}.png');
+                        }
+                    }
+                    width: calc(100% / 4);
+                    color: transparent;
+                    &.i1{
+                        position: absolute;
+                        height: $lh4;
+                        left: 14%;
+                        bottom: #{'min(1.5rem,60px)'};
+                        animation-name: box;
+                        animation-duration: 2s;
+                        animation-iteration-count: infinite;
+                    }
+                    &.i2{
+                        position: relative;
+                        position: absolute;
+                        height: #{'min(2.5rem,100px)'};
+                        right: 10%;
+                        top: #{'min(-0.5rem,-20px)'};
+                        .water{
+                            @include ptbtn;
+                            background-image: url('../images/main1/water.png');
+                            position: absolute;
+                            width: 15%;
+                            height: $lh2;
+                            right: 28%;
+                            top: $lh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &:nth-child(3){
+        background-color: #ffd36e;
+        padding: 0px 10px;
+        padding-top: #{'min(0.25rem,10px)'};
+        padding-bottom: #{'min(0.25rem,10px)'};
+        .main.main02{
+            border: 5px dashed #dca424;
+            .infoTop{
+                @include flex;
+                width: 85%;
+                margin: 0 auto;
+                margin-top: $lh;
+                .cha{
+                    @include ptbg;
+                    background-image: url('../images/main1/bgcbig.gif');
+                    width:calc(100% / 4 * 2.25);
+                    height: #{'min(4.5rem,180px)'};
+                    border: 6px solid #dca424;
+                    color: transparent;
+                    .image{
+                        @include ptbtn;
+                        background-image: url('../images/main1/main_me.gif');
+                        width: 50%;
+                        margin: 0 auto;
+                        height: $lh4;
+                        margin-top: $lh;
+                    }
+                }
+                .right{
+                    width: calc(100% / 4 * 2);
+                    h5{
+                        text-align: right;
+                        color: #fff;
+                        font-size: #{'min(1.8em,18px)'};
+                        font-family: pixel;
+                        line-height: $lh2;
+                    }
+                    .image{
+                        @include ptbtn;
+                        @for $i from 1 through 2{
+                            &.i#{$i}{
+                                background-image: url('../images/main1/bottom#{$i}.gif');
+                            }
+                        }
+                        position: relative;
+                        width: calc(100% / 4 * 1.8);
+                        height: #{'min(1.5rem,60px)'};
+                        margin-left: auto;
+                        margin-right: 15%;
+                        margin-top: #{'min(0.2rem,8px)'};
+                        &.i1::after{
+                            @include ptbtn;
+                            background-image: url('../images/main1/bottom.gif');
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            width: 170%;
+                            height: $lh3;
+                            left: -30%;
+                            top: -0.1rem;
+                        }
+                        &.i2{
+                            margin-top: $lh;
+                        }
+                    }
+                }
+            }
+            .infoMd{
+                .top{
+                    @include flex;
+                    padding: 0 30px;
+                    .left{
+                        width: 50%;
+                        h3{
+                            font-family: pixel;
+                            text-transform: capitalize;
+                            color: #fff;
+                            line-height: $lh2;
+                            font-size: #{'min(1.8em,18px)'};
+                        }
+                        .image{
+                            @include ptbtn;
+                            background-image: url('../images/mb/mainbar.png');
+                            width: 90%;
+                            height: $lh2;
+                            position: relative;
+                            span{
+                                color: #fff;
+                                line-height: $lh2;
+                                position: absolute;
+                                width: 50%;
+                                left: 10%;
+                            }
+                        }
+                    }
+                    .right{
+                        width: 50%;
+                        h3{
+                            font-family: pixel;
+                            text-transform: capitalize;
+                            color: #fff;
+                            line-height: $lh2;
+                            font-size: #{'min(1.8em,18px)'};
+                        }
+                        .image{
+                            @include ptbtn;
+                            background-image: url('../images/mb/mainbar.png');
+                            width: 90%;
+                            height: $lh2;
+                            position: relative;
+                            span{
+                                color: #fff;
+                                line-height: $lh2;
+                                position: absolute;
+                                width: 20%;
+                                left: 10%;
+                            }
+                        }
+                    }
+                }
+                .bottom{
+                    padding: 0 10%;
+                    h3{
+                        font-family: pixel;
+                        color: #fff;
+                        line-height: $lh2;
+                        font-size: #{'min(1.8em,18ox)'};
+                    }
+                    .image{
+                        @include ptbtn;
+                        background-image: url('../images/mb/mainlongbar.png');
+                        width: 95%;
+                        height: $lh2;
+                        position: relative;
+                        span{
+                            color: #fff;
+                            line-height: $lh2;
+                            position: absolute;
+                            width: 20%;
+                            left: 5%;
+                        }
+                    }
+                }
+            }
+            .infoBtm{
+                position: relative;
+                margin-top: $lh;
+                margin-bottom: #{'min(0.8rem,32px)'};
+                .group{
+                    @include flex;
+                    padding: 0 10%;
+                    .btn{
+                        color: #fff;
+                        font-size: #{1.2em,12px};
+                        width: calc(100% / 4 * 0.2);
+                    }
+                    h3{
+                        font-size: #{'min(1.8em,18px)'};
+                        text-transform: uppercase;
+                        font-family: pixel;
+                        color: #fff;
+                        line-height: $lh2;
+                        &:nth-child(2){
+                            width: calc(100% / 4 * 2.5);
+                        }
+                        &:nth-child(3){
+                            text-align: right;
+                            width: calc(100% / 4);
+                        }
+
+                    }
+                }
+                .box{
+                    margin: 0 auto;
+                    width: 85%;
+                    outline: 5px solid #dca424;
+                    padding: 0 5%;
+                    margin-top: $lh;
+                    padding-bottom: $lh;
+                    border-top: 3px solid #ca9b2f;
+                    border-right: 2px solid #ca9b2f;
+                    p{
+                        font-size: #{'min(1.5em,15px)'};
+                        line-height: $lh;
+                        padding-top: #{'min(0.1rem,4px)'};
+                        color: #fff;
+                        font-weight: normal;
+                        text-align: center;
+                        span{
+                            font-size: #{'min(1.8em,18px)'};
+                            font-weight: 700;
+                            line-height: $lh2;
+                        }
+                    }
+                }
+                .alert{
+                    @include flex;
+                    position: absolute;
+                    width: 80%;
+                    padding: 0 5%;
+                    padding-top: #{'min(0.2rem,8px)'};
+                    padding-bottom: #{'min(0.2rem,8px)'};
+                    left: 0;right: 0;
+                    top: 0;
+                    margin: auto;
+                    height: #{'min(2.25rem,90px)'};
+                    background-color: #ffd36e;
+                    outline: 6px solid #dca424;
+                    .image{
+                        @include ptbtn;
+                        background-image: url('../images/programming/btn01.gif');
+                        width: 30%;
+                        height: #{'min(1.5rem,60px)'};
+                        margin-top: #{'min(0.2rem,8px)'};
+                    }
+                    p{
+                        width: 60%;
+                        font-size: #{'min(1.2em,12px)'};
+                    }
+                    span{
+                        line-height: #{'min(0.2rem,8px)'};
+                        height: #{'min(0.3rem,12px)'};
+                        width: 5%;
+                    }
+                }
+            }
+        }
+    }
+    &:nth-child(4){
+        background-color: #feffde;
+        padding-top: $lh2;
+        .main.main03{
+            .chip{
+                @include flex;
+                width: 80%;
+                margin: 0 auto;
+                .image{
+                    @include ptbtn;
+                    width: calc(100% / 4 * 1.5);
+                    height: $lh4;
+                    color: transparent;
+                    @for $i from 1 through 3{
+                        &.i#{$i}{
+                            background-image: url('../images/main1/chip#{$i}.png');
+                        }
+                    }
+                }
+            }
+            .game{
+                width: calc(100% / 4 * 3);
+                color: transparent;
+                margin: 0 auto;
+                margin-top: $lh;
+                position: relative;
+                height: #{'min(7rem,280px)'};
+                .view{
+                    @include ptbg;
+                    background-image: url('../images/programming/loading.jpg');
+                    width: 60%;
+                    height: #{'min(5rem,200px)'};
+                    position: absolute;
+                    top: $lh;
+                    right: 12%;
+                }
+                .gameimage{
+                    @include ptbtn;
+                    background-image: url('../images/main1/bmomd.png');
+                    position: absolute;
+                    width: 100%;
+                    height: #{'min(7rem,280px)'};
+                }
+
+            }
+            .bottom{
+                height: $lh2;
+                .color{
+                    color: transparent;
+                    &:nth-child(1){
+                        background-color: #ffd36e;
+                        margin-top: #{'min(-0.2rem,-8px)'};
+                        height: $lh;
+                    }
+                    &:nth-child(2){
+                        background-color: #e9bc56;
+                    }
+                }
+            }
+        }
+    }
+    &:nth-child(5){
+        background-color: #e9bc56;
+        padding-top: 0;
+        padding: 0 5%;
+        padding-bottom: $lh;
+        padding-top: $lh;
+        .main.main04{
+            border: 5px dashed #ffd36e;
+            h2{
+                text-align: center;
+                font-size: #{'min(3em,30px)'};
+                font-family: bongus;
+                font-weight: 700;
+                line-height: $lh2;
+                margin-top: $lh2;
+            }
+            .kakao{
+                @include ptbg;
+                background-image: url('../images/programming/kakao.png');
+                width: 45%;
+                margin: 0 auto;
+                height: $lh5;
+                color: transparent;
+                margin-top: $lh;
+                outline: 1px solid #000;
+            }
+            .btn{
+                position: relative;
+                width: 45%;
+                text-align: center;
+                margin: 0 auto;
+                font-size: #{'min(15em,15px)'};
+                text-transform: capitalize;
+                &::after{
+                    @include ptbtn;
+                    background-image: url('../images/programming/pink2.png');
+                    content: '';
+                    width: 100%;
+                    height: #{'min(0.8rem,32px)'};
+                    position: absolute;
+                    opacity: 0.6;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+            .me{
+                @include flex;
+                color: transparent;
+                width: 30%;
+                margin-left: auto;
+                margin-right: 3%;
+                .image{
+                    @include ptbtn;
+                    @for $i from 1 through 2{
+                        &.i#{$i}{
+                            background-image: url('../images/main1/me#{$i}.png');
+                        }
+                    }
+                    position: relative;
+                    width: calc(100% / 4 * 2);
+                    height: #{'min(2.5rem,100px)'};
+                    .image{
+                        @include ptbtn;
+                        background-image: url('../images/main1/hearttalk.gif');
+                        position: absolute;
+                        width: 100%;
+                        height: $lh2;
+                        top: #{'min(-0.3rem,-12px)'};
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes box{
+    0%{
+        bottom: #{'min(1.5rem,60px)'};
+    }
+    10%{
+        bottom: #{'min(1.5rem,60px)'};
+    }
+    20%{
+        bottom: #{'min(1.5rem,60px)'};
+    }
+    30%{
+        bottom: #{'min(1.5rem,60px)'};
+    }
+    50%{
+        bottom: #{'min(2rem,80px)'};
+    }
+    70%{
+        bottom: #{'min(1.5rem,60px)'};
+    }
+    80%{
+        bottom: #{'min(1.5rem,60px)'};
+    }
+    100%{
+        bottom: #{'min(1.5rem,60px)'};
+    }
+}
