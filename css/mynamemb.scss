@@ -314,7 +314,7 @@ html{
                                 position: absolute;
                                 width: 50%;
                                 left: 10%;
-                                font-size: #{'min(1.8em,18px)'};
+                                font-size: #{'min(2em,20px)'};
                             }
                         }
                     }
@@ -339,7 +339,7 @@ html{
                                 position: absolute;
                                 width: 20%;
                                 left: 10%;
-                                font-size: #{'min(1.8em,18px)'};
+                                font-size: #{'min(2em,20px)'};
                             }
                         }
                     }
@@ -364,7 +364,7 @@ html{
                             position: absolute;
                             width: 20%;
                             left: 5%;
-                            font-size: #{'min(1.8em,18px)'};
+                            font-size: #{'min(2em,20px)'};
                         }
                     }
                 }
@@ -407,14 +407,14 @@ html{
                     border-top: 3px solid #ca9b2f;
                     border-right: 2px solid #ca9b2f;
                     p{
-                        font-size: #{'min(1.5em,15px)'};
-                        line-height: $lh;
+                        font-size: #{'min(1.8em,18px)'};
+                        line-height: #{'min(0.6rem,24px)'};
                         padding-top: #{'min(0.1rem,4px)'};
                         color: #fff;
                         font-weight: normal;
                         text-align: center;
                         span{
-                            font-size: #{'min(1.8em,18px)'};
+                            font-size: #{'min(2em,20px)'};
                             font-weight: 700;
                             line-height: $lh2;
                         }
