@@ -513,7 +513,7 @@ html{
                     height: 3rem;
                     position: absolute;
                     top: 0.4rem;
-                    right: 15%;
+                    right: 15.5%;
                 }
                 .gameimage{
                     @include ptbtn;
@@ -556,6 +556,7 @@ html{
                 font-weight: 700;
                 line-height: $lh2;
                 margin-top: $lh4;
+                font-weight: 700;
             }
             .kakao{
                 @include ptbg;
@@ -592,6 +593,7 @@ html{
                 width: 45%;
                 margin-left: auto;
                 margin-right: 3%;
+                margin-top: $lh;
                 .image{
                     @include ptbtn;
                     @for $i from 1 through 2{
