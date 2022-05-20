@@ -20,16 +20,18 @@ $(function(){
     var atr = 0, curind =0, tyt =0, drop =0;
     var posX = 0 , posY = 0;
     var pernum = 0, pereach = 0;
-    
+
+    // 적응형
     var brow = navigator.userAgent;
     if(brow.match('ios | Android | Symbian | Apple | Samsung | LG | Blackberry | iPhone | Gallaxy')){
-        window.location.href = 'url(../mynamemb.html)'
+        window.location.href = '../index.html'
     }else if(brow.match('iPad')){
-        window.location.href = 'url(../index.html)'
+        window.location.href = '../index.html'
     }
-
+    // f5새로고침
     $('html').animate({scrollTop:0},1250);
 
+    // 퍼센트
     for(var i = 0; i<len; i++){
         loc[i]= $('body>div').eq(i).offset().top;
     }
