@@ -24,10 +24,12 @@ $(function(){
     // 적응형
     var brow = navigator.userAgent;
     if(brow.match('ios | Android | Symbian | Apple | Samsung | LG | Blackberry | iPhone | Gallaxy')){
-        window.location.href = 'https://hollyjelly.github.io/mynamemb.html'
+        /*조건이 참이면 실행하게됨*/
+        window.location.href = 'D:\kr.co.dothome.myname\1.html\mynamemb.html'
     }else if(brow.match('iPad')){
-        window.location.href = 'https://hollyjelly.github.io/mynamemb.html'
+        window.location.href = 'D:\kr.co.dothome.myname\1.html\mynamemb.html'
     }
+
     // f5새로고침
     $('html').animate({scrollTop:0},1250);
 
