@@ -24,9 +24,9 @@ $(function(){
     // 적응형
     var brow = navigator.userAgent;
     if(brow.match('ios | Android | Symbian | Apple | Samsung | LG | Blackberry | iPhone | Gallaxy')){
-        window.location.href = '../index.html'
+        window.location.href = 'url(../index.html)'
     }else if(brow.match('iPad')){
-        window.location.href = '../index.html'
+        window.location.href = 'url(https://hollyjelly.github.io/mynamemb.html)'
     }
     // f5새로고침
     $('html').animate({scrollTop:0},1250);
