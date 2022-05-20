@@ -191,9 +191,9 @@ $(function(){
 
     var brow = navigator.userAgent;
     if(brow.match('ios | Android | Symbian | Apple | Samsung | LG | Blackberry | iPhone | Gallaxy')){
-        window.location.href = '../mynamemb.html'
+        window.location.href = './mynamemb.html'
     }else if(brow.match('iPad')){
-        window.location.href = '../index.html'
+        window.location.href = './index.html'
     }
     
 });
