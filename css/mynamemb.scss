@@ -512,10 +512,6 @@ html{
                     position: absolute;
                     top: $lh;
                     right: 16%;
-                    &.on{
-                        animation-name: view;
-                        animation-duration: 8s;
-                    }
                 }
                 .gameimage{
                     @include ptbtn;
@@ -640,16 +636,5 @@ html{
     }
     100%{
         bottom: #{'min(1.5rem,60px)'};
-    }
-}
-@keyframes view{
-    0%{
-        background-position: top;
-    }
-    50%{
-        background-position: bottom;
-    }
-    100%{
-        background-position: top;
     }
 }

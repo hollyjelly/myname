@@ -18,7 +18,6 @@ $(function(){
     function chipclick(){
         img = $(this).attr('data-img');
         view.css({backgroundImage:img});
-        view.toggleClass('on');
     }
     
     function xcli(){
