@@ -425,7 +425,7 @@ html{
                     padding-bottom: #{'min(0.2rem,8px)'};
                     left: 0;right: 0;
                     top: 0;bottom: 0;
-                    z-index: 5;
+                    z-index: -1;
                     margin: auto;
                     height: #{'min(2.25rem,90px)'};
                     background-color: #ffd36e;
@@ -433,7 +433,6 @@ html{
                     border-top: 3px solid #ca9b2f;
                     border-right: 2.5px solid #ca9b2f;
                     border-bottom: 1.5px solid #ca9b2f;
-                    display: none;
                     .image{
                         @include ptbtn;
                         background-image: url('../images/programming/btn01.gif');
@@ -445,6 +444,7 @@ html{
                         width: 60%;
                         font-size: #{'min(1.2em,12px)'};
                         color: #fff;
+                        line-height: $lh;
                     }
                     span{
                         line-height: #{'min(0.2rem,8px)'};
@@ -466,16 +466,34 @@ html{
                 @include flex;
                 width: 90%;
                 margin: 0 auto;
-                .image{
-                    @include ptbtn;
+                .imgbtn{
                     width: calc(100% / 3);
-                    height: $lh5;
-                    color: transparent;
-                    @for $i from 1 through 3{
-                        &.i#{$i}{
-                            background-image: url('../images/main1/chip#{$i}.png');
+                    .image{
+                        @include ptbtn;
+                        height: $lh4;
+                        color: transparent;
+                        @for $i from 1 through 3{
+                            &.i#{$i}{
+                                background-image: url('../images/main1/chip#{$i}.png');
+                            }
                         }
                     }
+                .btns{
+                    @include flex;
+                    width: 80%;
+                    margin: 0 auto;
+                    .btn{
+                        width: calc(50% - 5px);
+                        line-height: #{'min(0.8rem,32px)'};
+                        height: #{'min(0.8rem,32px)'};
+                        text-align: center;
+                        text-transform: uppercase;
+                        font-size: #{'min(1.2em,12px)'};
+                        color: #5c8378;
+                        font-family: pixel;
+                        border-bottom: 2px solid #5c8378;
+                    }
+                }
                 }
             }
             .game{
@@ -489,11 +507,11 @@ html{
                     @include ptbg;
                     background-position: top;
                     background-image: url('../images/programming/loading.jpg');
-                    width: 56%;
+                    width: 50%;
                     height: #{'min(5rem,200px)'};
                     position: absolute;
                     top: $lh;
-                    right: 14%;
+                    right: 16%;
                     &.on{
                         animation-name: view;
                         animation-duration: 8s;
