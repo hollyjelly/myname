@@ -188,5 +188,12 @@ $(function(){
     uptxt.click(upclick)
     $('body').on('mousewheel',mouse);
     setTimeout(jump,3400);
+
+    var brow = navigator.userAgent;
+    if(brow.match('ios | Android | Symbian | Apple | Samsung | LG | Blackberry | iPhone | Gallaxy')){
+        window.location.href = '../mynamemb.html'
+    }else if(brow.match('iPad')){
+        window.location.href = '../index.html'
+    }
     
 });
