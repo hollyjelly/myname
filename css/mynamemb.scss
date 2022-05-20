@@ -350,7 +350,7 @@ html{
                         font-family: pixel;
                         color: #fff;
                         line-height: $lh2;
-                        font-size: #{'min(1.8em,18ox)'};
+                        font-size: #{'min(1.8em,18px)'};
                     }
                     .image{
                         @include ptbtn;
