@@ -24,10 +24,9 @@ $(function(){
     // 적응형
     var brow = navigator.userAgent;
     if(brow.match('ios | Android | Symbian | Apple | Samsung | LG | Blackberry | iPhone | Gallaxy')){
-        /*조건이 참이면 실행하게됨*/
-        window.location.href = 'file:///D:/kr.co.dothome.myname/1.html/mynamemb.html'
+        window.location.href = './mynamemb.html'
     }else if(brow.match('iPad')){
-        window.location.href = 'file:///D:/kr.co.dothome.myname/1.html/mynamemb.html'
+        window.location.href = './mynamemb.html'
     }
 
     // f5새로고침
