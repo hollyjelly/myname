@@ -474,7 +474,7 @@ html{
                     width: calc(100% / 3);
                     .image{
                         @include ptbtn;
-                        height: $lh4;
+                        height: 3rem;
                         color: transparent;
                         @for $i from 1 through 3{
                             &.i#{$i}{
