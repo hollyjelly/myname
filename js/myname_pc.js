@@ -1,4 +1,12 @@
 $(function(){
+        // 적응형
+        var brow = navigator.userAgent;
+        if(brow.match('ios | Android | Symbian | Apple | Samsung | LG | Blackberry | iPhone | Gallaxy')){
+            window.location.href = './mynamemb.html'
+        }else if(brow.match('iPad')){
+            window.location.href = './mynametab.html'
+        }
+
     var loc = []
     var len = $('body>div').length;
     var flag = true;
@@ -20,14 +28,6 @@ $(function(){
     var atr = 0, curind =0, tyt =0, drop =0;
     var posX = 0 , posY = 0;
     var pernum = 0, pereach = 0;
-
-    // 적응형
-    var brow = navigator.userAgent;
-    if(brow.match('ios | Android | Symbian | Apple | Samsung | LG | Blackberry | iPhone | Gallaxy')){
-        window.location.href = './mynamemb.html'
-    }else if(brow.match('iPad')){
-        window.location.href = './mynamemb.html'
-    }
 
     // f5새로고침
     $('html').animate({scrollTop:0},1250);

@@ -231,9 +231,8 @@ html{
             border: 5px dashed #dca424;
             .infoTop{
                 @include flex;
-                width: 85%;
-                margin: 0 auto;
                 margin-top: $lh;
+                padding-left: 10%;
                 .cha{
                     @include ptbg;
                     background-image: url('../images/main1/bgcbig.gif');
@@ -251,13 +250,14 @@ html{
                     }
                 }
                 .right{
-                    width: calc(100% / 4 * 2);
+                    width: 50%;
                     h5{
                         text-align: right;
                         color: #fff;
                         font-size: #{'min(1.8em,18px)'};
                         font-family: pixel;
                         line-height: $lh2;
+                        text-align: center;
                     }
                     .image{
                         @include ptbtn;
@@ -269,8 +269,7 @@ html{
                         position: relative;
                         width: calc(100% / 4 * 1.8);
                         height: #{'min(1.5rem,60px)'};
-                        margin-left: auto;
-                        margin-right: 15%;
+                        margin: 0 auto;
                         margin-top: #{'min(0.2rem,8px)'};
                         &.i1::after{
                             @include ptbtn;
@@ -278,10 +277,9 @@ html{
                             content: '';
                             display: block;
                             position: absolute;
-                            width: 170%;
+                            width: 100%;
                             height: $lh3;
-                            left: -30%;
-                            top: -0.1rem;
+                            margin: auto;left: 0;right: 0;top: 0;bottom: 0;
                         }
                         &.i2{
                             margin-top: $lh;
@@ -306,11 +304,11 @@ html{
                             @include ptbtn;
                             background-image: url('../images/mb/mainbar.png');
                             width: 90%;
-                            height: $lh2;
+                            height: 1rem;
                             position: relative;
                             span{
                                 color: #fff;
-                                line-height: $lh2;
+                                line-height: 1rem;
                                 position: absolute;
                                 width: 50%;
                                 left: 10%;
@@ -331,11 +329,11 @@ html{
                             @include ptbtn;
                             background-image: url('../images/mb/mainbar.png');
                             width: 90%;
-                            height: $lh2;
+                            height: 1rem;
                             position: relative;
                             span{
                                 color: #fff;
-                                line-height: $lh2;
+                                line-height: 1rem;
                                 position: absolute;
                                 width: 20%;
                                 left: 10%;
@@ -568,7 +566,7 @@ html{
                 background-image: url('../images/programming/kakao.png');
                 width: 45%;
                 margin: 0 auto;
-                height: $lh5;
+                height: 4rem;
                 color: transparent;
                 margin-top: $lh;
                 outline: 1px solid #000;

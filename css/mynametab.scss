@@ -324,11 +324,11 @@ html{
                             @include ptbtn;
                             background-image: url('../images/main1/mainbar.png');
                             width: 90%;
-                            height: $lh3;
+                            height: 2rem;
                             position: relative;
                             span{
                                 color: #fff;
-                                line-height: $lh3;
+                                line-height: 2rem;
                                 position: absolute;
                                 width: 50%;
                                 left: 10%;
@@ -350,11 +350,11 @@ html{
                             @include ptbtn;
                             background-image: url('../images/main1/mainbar.png');
                             width: 90%;
-                            height: $lh3;
+                            height: 2rem;
                             position: relative;
                             span{
                                 color: #fff;
-                                line-height: $lh3;
+                                line-height: 2rem;
                                 position: absolute;
                                 width: 20%;
                                 left: 10%;
@@ -376,12 +376,12 @@ html{
                         @include ptbtn;
                         background-image: url('../images/tab/mainlongbar.png');
                         width: 95%;
-                        height: $lh3;
+                        height: 3rem;
                         position: relative;
                         overflow: hidden;
                         span{
                             color: #fff;
-                            line-height: $lh3;
+                            line-height: 3rem;
                             position: absolute;
                             width: 20%;
                             left: 5%;
@@ -496,7 +496,7 @@ html{
                     width: calc(100% / 3);
                     .image{
                         @include ptbtn;
-                        height: #{'min(5.5rem,220px)'};
+                        height: 6rem;
                         color: transparent;
                         @for $i from 1 through 3{
                             &.i#{$i}{
@@ -628,7 +628,7 @@ html{
                     }
                     position: relative;
                     width: calc(100% / 2);
-                    height: #{'min(5.5rem,220px)'};
+                    height: 5.5rem;
                     .image{
                         @include ptbtn;
                         background-image: url('../images/main1/hearttalk.gif');
