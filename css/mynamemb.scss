@@ -290,7 +290,7 @@ html{
             .infoMd{
                 .top{
                     @include flex;
-                    padding: 0 30px;
+                    padding: 0 10%;
                     .left{
                         width: 50%;
                         h3{
@@ -354,12 +354,12 @@ html{
                         @include ptbtn;
                         background-image: url('../images/mb/mainlongbar.png');
                         width: 95%;
-                        height: $lh2;
+                        height: 1rem;
                         position: relative;
                         overflow: hidden;
                         span{
                             color: #fff;
-                            line-height: $lh2;
+                            line-height: 2.5rem;
                             position: absolute;
                             width: 20%;
                             left: 5%;
