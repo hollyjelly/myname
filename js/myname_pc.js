@@ -47,7 +47,7 @@ $(function(){
         if(curind == 0){
             curtxt.text('웹 표준을 준수하고 일관성 있는 문서작업이 가능');
         }else if(curind == 1){
-            curtxt.text('미정');
+            curtxt.text('돔탐색을 명확히 할 수 있습니다. ES5/ES6');
         }else if(curind == 2){
             curtxt.text('미디어쿼리를 이용한 다양한 반응형 웹을 제작, 선택자를 명확히 가져오고, hover,keyframes를 사용하여 동적인 요소 사용가능, include, mixin, for, if를 사용 가능');
         }else if(curind == 3){

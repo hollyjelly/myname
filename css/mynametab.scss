@@ -493,12 +493,12 @@ html{
                 width: 90%;
                 margin: 0 auto;
                 .imgbtn{
-                    width: calc(100% / 3);
+                    width: calc(100% / 4 - 20px);
                     .image{
                         @include ptbtn;
                         height: 6rem;
                         color: transparent;
-                        @for $i from 1 through 3{
+                        @for $i from 1 through 4{
                             &.i#{$i}{
                                 background-image: url('../images/main1/chip#{$i}.png');
                             }
