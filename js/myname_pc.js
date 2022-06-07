@@ -46,11 +46,11 @@ $(function(){
         if(curind == 0){
             curtxt.text('웹 표준을 준수하고 일관성 있는 문서작업이 가능');
         }else if(curind == 1){
-            curtxt.text('돔탐색을 명확히 할 수 있습니다. ES5/ES6');
+            curtxt.text(' ES5/ES6 돔탐색을 명확히 하고 파라미터를 활용하여 함수 재사용이 가능하며 하드코딩이 가능');
         }else if(curind == 2){
-            curtxt.text('미디어쿼리를 이용한 다양한 반응형 웹을 제작, 선택자를 명확히 가져오고, hover,keyframes를 사용하여 동적인 요소 사용가능, include, mixin, for를 사용 가능');
+            curtxt.text('미디어쿼리를 이용한 다양한 반응형 웹을 제작하고 선택자를 명확히 가져올 수 있으며 hover,keyframes를 사용하여 동적인 요소 사용가능, include, mixin, for를 사용 가능');
         }else if(curind == 3){
-            curtxt.text('돔탐색을 명확히 할 수 있고 원하는 동적인 요소를 하드코딩 가능');
+            curtxt.text('돔탐색을 명확히 하고 파라미터를 활용하여 함수 재사용이 가능하며 하드코딩이 가능');
         }else if(curind == 4){
             curtxt.text('grid system을 사용하여 웹사이트 시안이 가능하며 이미지 보정, 배경에서 제품 분리 등의 가공이 가능');
         }else if(curind == 5){
