@@ -40,7 +40,6 @@ $(function(){
     function moveover(move){
         // 마우스오버했을 때 창 뜨는거
         curind = $(this).index();
-        console.log(curind)
         atr = curimg.attr('data-img'+curind);
         curimg.css({backgroundImage:atr});
 
@@ -49,7 +48,7 @@ $(function(){
         }else if(curind == 1){
             curtxt.text('돔탐색을 명확히 할 수 있습니다. ES5/ES6');
         }else if(curind == 2){
-            curtxt.text('미디어쿼리를 이용한 다양한 반응형 웹을 제작, 선택자를 명확히 가져오고, hover,keyframes를 사용하여 동적인 요소 사용가능, include, mixin, for, if를 사용 가능');
+            curtxt.text('미디어쿼리를 이용한 다양한 반응형 웹을 제작, 선택자를 명확히 가져오고, hover,keyframes를 사용하여 동적인 요소 사용가능, include, mixin, for를 사용 가능');
         }else if(curind == 3){
             curtxt.text('돔탐색을 명확히 할 수 있고 원하는 동적인 요소를 하드코딩 가능');
         }else if(curind == 4){
@@ -89,7 +88,6 @@ $(function(){
                 flag=false;
                 if(a>=9){a=9;}
             }
-            console.log(a)
             $('html').animate({scrollTop:loc[a]},1250,'swing',function(){
                 flag=true;
             });
@@ -114,7 +112,6 @@ $(function(){
                         duration:2000,
                         progress:function(){
                             pernum = this.percent;
-                            console.log(pereach)
                             pertxt.eq(width).text(parseInt(pernum));
                             per.eq(width).css({width:parseInt(pernum)+'%'});
                         }
@@ -147,7 +144,7 @@ $(function(){
             $('.gametop').css({opacity:'1'});
             $('.gameleft').css({opacity:'1'});
             $('.gameright').css({opacity:'1'});
-            $('.gamebottom').css({opacity:'1'});
+            $('.gamebottom').css({opacity:'1',zIndex:'5'});
         });
     }
     function downclick(){

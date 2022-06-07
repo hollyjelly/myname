@@ -34,7 +34,7 @@ $(function(){
         }else if(ind == 1){
             curtxt.text('돔탐색을 명확히 할 수 있습니다. ES5/ES6');
         }else if(ind == 2){
-            curtxt.text('미디어쿼리를 이용한 다양한 반응형 웹을 제작, 선택자를 명확히 가져오고, hover,keyframes를 사용하여 동적인 요소 사용가능, include, mixin, for, if를 사용 가능');
+            curtxt.text('미디어쿼리를 이용한 다양한 반응형 웹을 제작, 선택자를 명확히 가져오고, hover,keyframes를 사용하여 동적인 요소 사용가능, include, mixin, for를 사용 가능');
         }else if(ind == 3){
             curtxt.text('돔탐색을 명확히 할 수 있고 원하는 동적인 요소를 하드코딩 가능');
         }else if(ind == 4){
