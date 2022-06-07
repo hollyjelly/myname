@@ -10,10 +10,6 @@ $(function(){
     var view = $('.main.main03 .game .view');
     var img = 0,ind = 0, pt = 0;
 
-    curtxt.click(function(){
-        alert('dd');
-    });
-
     function heartcli(){
         $(this).css({opacity:'0'});
         setTimeout(function(){

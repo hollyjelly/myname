@@ -437,6 +437,7 @@ html{
                     border-top: 3px solid #ca9b2f;
                     border-right: 2.5px solid #ca9b2f;
                     border-bottom: 1.5px solid #ca9b2f;
+                    overflow: hidden;
                     .image{
                         @include ptbtn;
                         background-image: url('../images/programming/btn01.gif');
