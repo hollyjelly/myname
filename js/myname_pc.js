@@ -195,5 +195,17 @@ $(function(){
     uptxt.click(upclick)
     $('body').on('mousewheel',mouse);
     setTimeout(jump,3400);
-    
+
+
+
+    console.log('             ^        ^            ');
+    console.log('            / ＼     / ＼          ');
+    console.log('           ◜   -----    ◝            ');
+    console.log('          ⇃--   ▪    ▪  --⇂           ');
+    console.log('           ◟--   ㅅ   --◞           ');
+    console.log('                 ▶◀                ');
+    console.log('▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪');
+    console.log(' ▪ ▪ ▪ ▪ ▪ ▪ 방문해 주셔서 ▪ ▪ ▪ ▪ ▪ ▪ ');
+    console.log('▪ ▪ ▪ ▪ ▪ ▪ ▪ 감사합니다 ▪ ▪ ▪ ▪ ▪ ▪ ▪');
+    console.log(' ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ');
 });
