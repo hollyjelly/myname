@@ -32,6 +32,10 @@ $(function(){
     // f5새로고침
     $('html').animate({scrollTop:0},1250);
 
+    $( window ).resize(function(){
+        location.reload();
+    });
+
     // 퍼센트
     for(var i = 0; i<len; i++){
         loc[i]= $('body>div').eq(i).offset().top;
