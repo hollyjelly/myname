@@ -30,18 +30,12 @@ $(function(){
     var atr = 0, curind =0, tyt =0, drop =0;
     var posX = 0 , posY = 0;
     var pernum = 0, pereach = 0;
-
-    if(windowHeight < 710 && windowHeight > 600){
-        view.css({right:'5%'});
-    }else if(windowHeight < 600){
-        view.css({right:'10%',width:'50%'});
-    }
     
     // f5새로고침
     $('html').animate({scrollTop:0},1250);
     
     $( window ).resize(function(){
-        // location.reload();
+        location.reload();
         if(windowHeight < 710){
             view.css({right:'5%'});
         }else if(windowHeight < 610){
