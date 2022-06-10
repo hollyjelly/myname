@@ -679,13 +679,19 @@ html{
                                 &:nth-child(1)~.txtGroup{
                                     margin-top: $lh;
                                 }
+                                &:nth-child(2){
+                                    h3{
+                                        line-height: $lh2;
+                                        padding-top: $lh;
+                                    }
+                                }
                                 h3{
                                     font-size: #{'min(2.5rem,25px)'};
                                     line-height: $lh3;
                                     text-transform: uppercase;
                                     width: calc(100% / 14 * 3);
                                     height: $lh3;
-                                    overflow: hidden;
+                                    // overflow: hidden;
                                     &::selection{
                                         color: #fc0;
                                         background-color: #fff;
