@@ -25,19 +25,16 @@ $(function(){
     var chip = $('.mainWrap.mainWrap05 .main.main05 .gameRight .image');
     var gamema = $('.mainWrap.mainWrap05 .main.main05 .gameLeft .gameview');
     var logo = $('.logo');
-    var view = $('.mainWrap.mainWrap05 .main.main05 .gameLeft .gameview');
-    var windowHeight =  $(window).height();
     var atr = 0, curind =0, tyt =0, drop =0;
     var posX = 0 , posY = 0;
     var pernum = 0, pereach = 0;
-    
+
     // f5새로고침
     $('html').animate({scrollTop:0},1250);
-    
+
     $( window ).resize(function(){
         location.reload();
     });
-
 
     // 퍼센트
     for(var i = 0; i<len; i++){
