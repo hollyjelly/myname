@@ -36,11 +36,6 @@ $(function(){
     
     $( window ).resize(function(){
         location.reload();
-        if(windowHeight < 710){
-            view.css({right:'5%'});
-        }else if(windowHeight < 610){
-            view.css({right:'10%',width:'50%'});
-        }
     });
 
 
