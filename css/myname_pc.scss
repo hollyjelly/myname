@@ -708,16 +708,20 @@ html{
                                     height: #{'min(1.5rem,60px)'};
                                     position: relative;
                                     .per{
-                                        width: 80%;
+                                        width: 90%;
                                         height: 20px;
                                         position: absolute;
-                                        background-color: #fff;
+                                        left: 5.5%;
+                                        bottom: 0;
                                         margin: auto;
                                         top: 0;
-                                        bottom: 0;
-                                        border-radius: 5px;
-                                        left: 5%;
                                         color: transparent;
+                                        .width{
+                                            width: 80%;
+                                            height: 20px;
+                                            background-color: #fff;
+                                            border-radius: 5px; 
+                                        }
                                     }
                                 }
                                 h5{

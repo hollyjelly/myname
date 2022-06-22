@@ -18,7 +18,7 @@ $(function(){
     var cursor = $('.mainWrap .main.main03 .alert');
     var curimg = $('.mainWrap .main.main03 .alert .image');
     var curtxt = $('.mainWrap .main.main03 .alert p');
-    var per = $('.mainWrap .main.main03 .txtGroup>.image .per');
+    var per = $('.mainWrap .main.main03 .txtGroup>.image .per .width');
     var pertxt = $('.mainWrap .main.main03 .txtGroup h5 span');
     var up = $('.mainWrap .main.main04 .infofir .btn');
     var uptxt = $('.mainWrap .main.main04 .btn h4');
@@ -70,6 +70,12 @@ $(function(){
         });
 
 
+    }
+
+    function mouseout(){
+        cursor.css({
+            opacity:'0'
+        });
     }
 
     function jump(){
@@ -193,6 +199,7 @@ $(function(){
 
     logo.click(logoclick);
     cursorGroup.mousemove(moveover);
+    cursorGroup.mouseleave(mouseout)
     down.click(downclick);
     downtxt.click(downclick);
     up.click(upclick);
